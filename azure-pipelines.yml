@@ -9,6 +9,6 @@ steps:
     neuvectorScanner: 'nv-gke'
     containerRegistry: 'dockeregistry'
     repository: 'nvlab/alpine'
-    tag: '3.4'
+    tag: '*'
 
 
