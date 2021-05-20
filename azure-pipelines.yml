@@ -1,9 +1,7 @@
 trigger:
 - main
-
 pool:
   vmImage: ubuntu-latest
-
 steps:
 - task: NeuVectorScan@2
   inputs:
@@ -11,6 +9,8 @@ steps:
     neuvectorScanner: 'nv-gke'
     containerRegistry: 'dockeregistry'
     repository: 'nvlab/alpine'
-    tag: '3.4'
-    failOnMediumSeverityThreshold: true
-    mediumSeverityThreshold: '3'
+    tag: '*'
+    failOnHighSeverityThreshold: true
+    highSeverityThreshold: '7'
+
+
