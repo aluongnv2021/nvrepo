@@ -1,3 +1,10 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
 - task: NeuVectorScan@2
   inputs:
     scanType: 'external'
