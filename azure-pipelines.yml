@@ -1,15 +1,3 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-trigger:
-- main
-
-pool:
-  vmImage: ubuntu-latest
-
-steps:
 - task: NeuVectorScan@2
   inputs:
     scanType: 'external'
@@ -17,3 +5,5 @@ steps:
     containerRegistry: 'dockeregistry'
     repository: 'nvlab/alpine'
     tag: '3.4'
+    failOnMediumSeverityThreshold: true
+    mediumSeverityThreshold: '3'
