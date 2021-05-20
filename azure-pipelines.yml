@@ -9,8 +9,6 @@ steps:
     neuvectorScanner: 'nv-gke'
     containerRegistry: 'dockeregistry'
     repository: 'nvlab/alpine'
-    tag: '*'
-    failOnHighSeverityThreshold: true
-    highSeverityThreshold: '7'
+    tag: '3.4'
 
 
