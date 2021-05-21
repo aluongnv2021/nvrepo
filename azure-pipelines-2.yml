@@ -1,0 +1,29 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- task: DownloadSecureFile@1
+  name: neuvecctorlicense
+  inputs:
+    secureFile: 'neuvector-license.txt'
+
+- task: NeuVectorScan@2
+  inputs:
+    scanType: 'standalone'
+    license: '$(nvlicense.secureFilePath)'
+    nvContainerRegistry: 'dockeregistry'
+    nvRepository: 'neuvector/scanner'
+    nvTag: 'latest'
+    containerRegistry: 'dockeregistry'
+    repository: 'nvlab/alpine'
+    tag: '3.4'
