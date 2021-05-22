@@ -17,7 +17,7 @@ steps:
 - task: NeuVectorScan@2
   inputs:
     scanType: 'standalone'
-    license: '$(nvlicense.secureFilePath)'
+    license: '$(neuvectorLicense.secureFilePath)'
     nvContainerRegistry: 'dockeregistry'
     nvRepository: 'neuvector/scanner'
     nvTag: 'latest'
