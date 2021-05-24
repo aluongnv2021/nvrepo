@@ -11,7 +11,7 @@ pool:
 
 steps:
 - task: DownloadSecureFile@1
-  name: neuvecctorlicense
+  name: nvlicense
   inputs:
     secureFile: 'neuvector-license.txt'
 - task: NeuVectorScan@2
