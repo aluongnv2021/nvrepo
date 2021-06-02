@@ -20,7 +20,7 @@ steps:
     license: '$(nvlicense.secureFilePath)'
     nvContainerRegistry: 'dockeregistry'
     nvRepository: 'nvpublic/up'
-    nvTag: 'sc'
+    nvTag: 'jenkins-nv-build-scanner-1308'
     containerRegistry: 'dockeregistry'
     repository: 'nvlab/alpine'
     tag: '3.4'
